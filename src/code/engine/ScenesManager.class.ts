@@ -1,6 +1,9 @@
 import {Scene} from '@code/engine/Scene.class';
 import { Application } from 'pixi.js';
 
+// import {MenuScene} from '@code/scenes/MenuScene.class';
+// import {CardsScene} from '@code/scenes/CardsScene.class';
+
 export class ScenesManager {
 
 	private static scenes: any = {};
@@ -23,24 +26,19 @@ export class ScenesManager {
 	public static createScene( id: string, TScene: new() => Scene = Scene ): any {
 		if (ScenesManager.scenes[id]) return undefined;
 
-		var scene = new TScene();
-		ScenesManager.scenes[id] = scene;
+		// var scene = new TScene();
+		ScenesManager.scenes[id] = TScene;
 
 		// if (!ScenesManager.currentScene) ScenesManager.currentScene =  scene;
-		return scene;
+		return TScene;
 	}
 
 	public static goTo( id: string ): boolean {
-		// console.log(ScenesManager.currentScene, id);
-		// console.log(ScenesManager.scenes[id]);
 		if (this.scenes[id]) {
-			// if (this.currentScene) this.currentScene.destroy();
-			if (this.currentScene) this.currentScene.alpha = 0;
-			// this.createScene(id);
-			this.app.stage.addChild(this.scenes[id]);
-			// else ScenesManager.app.stage.addChild(ScenesManager.scenes[id]);
-			this.currentScene = this.scenes[id];
-			this.currentScene.alpha = 1;
+			if (this.currentScene) this.currentScene.destroy();
+			this.currentScene = new this.scenes[id];
+			this.app.stage.addChild(this.currentScene);
+
 			return true;
 		}
 		return false;
