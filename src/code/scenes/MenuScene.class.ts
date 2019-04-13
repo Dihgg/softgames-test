@@ -10,7 +10,7 @@ export class MenuScene extends Scene {
 		super();
 		[
 			{ label: "Cards Stack", scene: "cards", y: (this.renderer.height / 2) - 150  },
-			{ label: "Mixed Text", scene: "mixed", y: (this.renderer.height / 2) },
+			{ label: "Mixed Text", scene: "mixedText", y: (this.renderer.height / 2) },
 			{ label: "Fire", scene: "fire", y: (this.renderer.height / 2) + 150 }
 		].map(({label, scene, y}) => {
 

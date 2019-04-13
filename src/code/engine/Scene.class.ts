@@ -20,7 +20,6 @@ export class Scene extends PIXI.Container {
 			this.addChild(backBtn);
 
 			backBtn.on( 'pointerdown', () => ScenesManager.goTo('menu') );
-
 		}
 	}
 }
