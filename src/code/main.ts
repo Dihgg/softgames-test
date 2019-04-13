@@ -1,5 +1,8 @@
 import { Application, loader } from 'pixi.js';
 import assets from '@assets/assets.json';
+import {MenuScene} from '@code/scenes/MenuScene.class';
+import {CardsScene} from '@code/scenes/CardsScene.class';
+import {ScenesManager} from "@code/engine/ScenesManager.class";
 
 class Game {
 	private app: Application;
@@ -16,9 +19,11 @@ class Game {
 		document.body.appendChild( this.app.view );
 
 		// resize listener
-		window.addEventListener( "resize", () => {
+		/*window.addEventListener( "resize", () => {
 			this.app.renderer.resize( window.innerWidth, window.innerHeight );
-		} );
+		} );*/
+
+		ScenesManager.create(this.app);
 
 
 		this.preload();
@@ -34,6 +39,26 @@ class Game {
 		} );
 	}
 
-	setup(): void {}
+	setup(): void {
+		// let menuScene = new MenuScene();
+		// console.log(menuScene);
+		// this.app.stage.addChild(menuScene);
+
+		// CREATE All the scenes
+		let menuScene 	= ScenesManager.createScene( 'menu', MenuScene );
+		let cardsScene	= ScenesManager.createScene( 'cards', CardsScene )
+
+		// set The ScenesManager to first scene
+		ScenesManager.goTo('menu');
+
+		// Add the ScenesManager to app
+		// this.app.stage.addChild(ScenesManager.currentScene);
+		// this.app.stage.addChild(menuScene);
+		// let _self = this;
+		// setTimeout(function(){
+		// 	menuScene.destroy();
+		// 	_self.app.stage.addChild(cardsScene);
+		// }, 2000);
+	}
 }
 new Game();
