@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+		"baseUrl": "./src/",
+        "target": "es6",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "allowJs": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"paths": {
+			"@assets/*": ["assets/*"],
+			"@code/*": ["code/*"]
+		}
+    }
+}
