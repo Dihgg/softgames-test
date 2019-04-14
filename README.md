@@ -24,7 +24,7 @@ $ npm run server
 
 The development server will run on [http://localhost:9000](http://localhost:9000)
 
-## On-line working version
+## Online version
 An online version can be found [here](http://dihgg.com/dev/softgames/)
 
 ## Description
