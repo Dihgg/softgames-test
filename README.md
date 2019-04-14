@@ -28,7 +28,7 @@ The development server will run on [http://localhost:9000](http://localhost:9000
 
 ## Description
 
-This project contains 3 solved tasks and menu screen.
+This project contains 3 tasks and menu screen.
 
 1. Sprites Stack
 
