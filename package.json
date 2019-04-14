@@ -22,8 +22,9 @@
     "@types/pixi.js": "^4.8.7",
     "@types/tween.js": "^17.2.0",
     "clean-webpack-plugin": "^2.0.1",
+    "copy-webpack-plugin": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
-    "pixi-display": "^1.1.1",
+    "pixi-fps": "^1.1.3",
     "pixi-particles": "^4.1.0",
     "pixi.js": "^4.8.7",
     "script-loader": "^0.7.2",
@@ -34,8 +35,5 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
   },
-  "dependencies": {
-    "copy-webpack-plugin": "^5.0.2",
-    "pixi-fps": "^1.1.3"
-  }
+  "dependencies": {}
 }
