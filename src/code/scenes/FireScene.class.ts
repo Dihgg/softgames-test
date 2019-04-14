@@ -3,16 +3,20 @@ import * as Particles from 'pixi-particles';
 
 export class FireScene extends Scene {
 
+	// variables
+	// particles emitter
 	private emitter: Particles.Emitter;
 
 	constructor() {
-		super(true, true);
+		super(true, true); // create scene
 
+		// create the emitter container
 		let emitterContainer = new PIXI.Container();
 		emitterContainer.position.x = this.renderer.width/2;
 		emitterContainer.position.y = this.renderer.height/2;
 		this.addChild(emitterContainer);
 
+		// create the emitter
 		this.emitter = new Particles.Emitter(
 			emitterContainer,
 			new Array(2).fill(0).map((v,i) => PIXI.Texture.fromFrame(`fire_${i}.png`)),
@@ -53,9 +57,11 @@ export class FireScene extends Scene {
 	        }
 		);
 		this.emitter.particleBlendMode = PIXI.BLEND_MODES.MULTIPLY;
+		// start it
 		this.emitter.emit = true;
 	}
 
+	// extends update for emitter logic
 	public update( dt:number ) {
 		this.emitter.update(dt * 0.001);
 	}

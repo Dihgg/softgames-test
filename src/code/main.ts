@@ -16,20 +16,15 @@ class Game {
 	      width				: window.innerWidth,
 	      height			: window.innerHeight,
 	      backgroundColor	: 0x1099bb
-	      // backgroundColor	: 0x000000
 	    });
 
 		// create view in DOM
 		document.body.appendChild( this.app.view );
 
-		// resize listener
-		/*window.addEventListener( "resize", () => {
-			this.app.renderer.resize( window.innerWidth, window.innerHeight );
-		} );*/
-
+		// Create scene ScenesManager (this guy is super cool)
 		ScenesManager.create(this.app);
 
-
+		// preaload them'all
 		this.preload();
 
 		// lauch app
@@ -49,22 +44,14 @@ class Game {
 		// this.app.stage.addChild(menuScene);
 
 		// CREATE All the scenes
-		let menuScene 		= ScenesManager.createScene( 'menu', MenuScene ),
-			cardsScene		= ScenesManager.createScene( 'cards', CardsScene ),
-			mixedTextScene	= ScenesManager.createScene( 'mixedText', MixedTextScene ),
-			fireScene		= ScenesManager.createScene( 'fire', FireScene );
+		ScenesManager.createScene( 'menu', MenuScene ),
+		ScenesManager.createScene( 'cards', CardsScene ),
+		ScenesManager.createScene( 'mixedText', MixedTextScene ),
+		ScenesManager.createScene( 'fire', FireScene );
 
 		// set The ScenesManager to first scene
 		ScenesManager.goTo('menu');
 
-		// Add the ScenesManager to app
-		// this.app.stage.addChild(ScenesManager.currentScene);
-		// this.app.stage.addChild(menuScene);
-		// let _self = this;
-		// setTimeout(function(){
-		// 	menuScene.destroy();
-		// 	_self.app.stage.addChild(cardsScene);
-		// }, 2000);
 	}
 }
 new Game();

@@ -4,23 +4,17 @@ import {Card} from '@code/components/card.class';
 
 import * as TWEEN from '@tweenjs/tween.js'
 
-// import 'pixi-display';
-
 export class CardsScene extends Scene {
 	constructor() {
-		super(true, true);
+		super(true, true); // create the scene
 
 		let cards	= [];
-			// cardsY	= [];
 
-		// let cardsL = new PIXI.DisplayGroup(0, true);
-
-		// for(let i = 144;i > 0; i--) cardsY.push((this.renderer.height) + (i * 2));
-		// cardsY = cardsY.reverse()
-
-
+		// create 144 cards
 		for(let i = 144;i > 0;i--) {
 			let card = new Card(i);
+
+			// position
 			card.sprite.position.x = 84;
 			card.sprite.position.y = this.renderer.height/2 + (i*0.5);
 
@@ -28,7 +22,7 @@ export class CardsScene extends Scene {
 
 			this.addChild(card);
 
-			// console.log(cardsY[i]);
+			// Make them dance!
 			new TWEEN.Tween(card)
 			.to({x: this.renderer.width - card.sprite.width - 108, y: (144-i) }, 2000)
 			.easing(TWEEN.Easing.Quadratic.Out)
@@ -36,6 +30,7 @@ export class CardsScene extends Scene {
 			.start();
 		}
 	}
+	// extends the update and call the Tween update
 	public update() {
 		TWEEN.update(this.ticker.lastTime);
 	}

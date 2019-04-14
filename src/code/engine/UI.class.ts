@@ -1,3 +1,6 @@
+// SOME UI COMPONENTS
+
+// button extends Graphics has some styles
 export class UIButton extends PIXI.Graphics {
 
 	private text: PIXI.Text;
