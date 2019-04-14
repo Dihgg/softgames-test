@@ -6,5 +6,9 @@
 	{
 		"key"	: "button",
 		"src"	: "img/button.png"
+	},
+	{
+		"key"	: "fire",
+		"src"	: "img/fire.json"
 	}
 ]

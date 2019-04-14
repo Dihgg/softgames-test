@@ -42,9 +42,9 @@ export class Scene extends PIXI.Container {
 
 		}
 
-		this.ticker.add(() => this.update(), PIXI.UPDATE_PRIORITY.LOW );
+		this.ticker.add((dt:number) => this.update(dt), PIXI.UPDATE_PRIORITY.LOW );
 		this.ticker.start();
 	}
 
-	public update() {}
+	public update( dt:number ) {}
 }

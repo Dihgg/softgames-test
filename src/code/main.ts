@@ -16,6 +16,7 @@ class Game {
 	      width				: window.innerWidth,
 	      height			: window.innerHeight,
 	      backgroundColor	: 0x1099bb
+	      // backgroundColor	: 0x000000
 	    });
 
 		// create view in DOM
