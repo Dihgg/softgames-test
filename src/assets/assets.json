@@ -1,7 +1,7 @@
 [
 	{
 		"key"	: "cards",
-		"src"	: "img/cards.svg"
+		"src"	: "img/cards.json"
 	},
 	{
 		"key"	: "button",

@@ -1,7 +1,7 @@
 import { Scene } from '@code/engine/Scene.class';
 import { ScenesManager } from '@code/engine/ScenesManager.class';
 
-import { loader } from 'pixi.js';
+// import { loader } from 'pixi.js';
 
 import { UIButton } from '@code/engine/UI.class'
 
