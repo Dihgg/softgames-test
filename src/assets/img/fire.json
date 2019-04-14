@@ -1,11 +1,11 @@
 {
 "frames": {
-	"0.png": {
+	"fire_0.png": {
 		"frame": {"x":0, "y":0, "w":128, "h":128},
 		"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
 		"sourceSize": {"w":128,"h":128}
 	},
-	"1.png": {
+	"fire_1.png": {
 		"frame": {"x":0, "y":129, "w":64, "h":64},
 		"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
 		"sourceSize": {"w":64,"h":64}
@@ -13,7 +13,7 @@
 
 },
 "meta": {
-	"image": "sprites.png",
+	"image": "fire.png",
 	"size": {"w": 129, "h": 194},
 	"scale": "1"
 }

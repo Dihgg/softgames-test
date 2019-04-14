@@ -1,4 +1,4 @@
-import { loader } from 'pixi.js';
+// import { loader } from 'pixi.js';
 
 import { ScenesManager } from '@code/engine/ScenesManager.class';
 

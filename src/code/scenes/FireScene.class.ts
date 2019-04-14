@@ -15,7 +15,7 @@ export class FireScene extends Scene {
 
 		this.emitter = new Particles.Emitter(
 			emitterContainer,
-			new Array(2).fill(0).map((v,i) => PIXI.Texture.fromFrame(`${i}.png`)),
+			new Array(2).fill(0).map((v,i) => PIXI.Texture.fromFrame(`fire_${i}.png`)),
 			{
 	          alpha: {
 	            list: [

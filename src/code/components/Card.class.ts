@@ -1,4 +1,4 @@
-import { loader } from 'pixi.js';
+// import { loader } from 'pixi.js';
 
 export class Card extends PIXI.Container {
 

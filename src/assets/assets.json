@@ -4,11 +4,11 @@
 		"src"	: "img/cards.json"
 	},
 	{
-		"key"	: "button",
-		"src"	: "img/button.png"
-	},
-	{
 		"key"	: "fire",
 		"src"	: "img/fire.json"
+	},
+	{
+		"key"	: "emoji",
+		"src"	: "img/emoji.json"
 	}
 ]
